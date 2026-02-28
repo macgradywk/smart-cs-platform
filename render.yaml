@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: smart-cs-backend
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ZHIPU_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
