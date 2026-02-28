@@ -1,0 +1,5 @@
+/*  Netlify SPA 路由：所有路径都返回 index.html，由前端 JS 处理路由  */
+/*  :splat 匹配所有子路径，200 表示返回 index.html 而非 301 跳转  */
+/* ! 只匹配非文件路径 */
+/api/*  200
+/*      /index.html   200
