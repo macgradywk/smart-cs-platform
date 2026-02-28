@@ -13,7 +13,11 @@ async function startServer() {
     // CORS 配置：生产环境只允许 Netlify 域名，开发环境允许所有
     const allowedOrigins = process.env.ALLOWED_ORIGINS
         ? process.env.ALLOWED_ORIGINS.split(',').map(o => o.trim())
-        : ['http://localhost:5173', 'http://localhost:3000'];
+        : [
+            'http://localhost:5173',
+            'http://localhost:3000',
+            'https://deft-beijinho-bb9290.netlify.app'
+        ];
 
     app.use(cors({
         origin: (origin, callback) => {
